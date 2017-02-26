@@ -12,7 +12,7 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-	ofSetColor(255, 0, 127);
+	ofSetColor(64, 164, 233);
 
 	ofBeginShape();
 	for (int i = 0; i < 100; i++) {
@@ -21,8 +21,8 @@ void ofApp::draw(){
 
 		float add = ofNoise(i / 20.0f, ofGetElapsedTimef() * 3 * (float)mouseX / (float)ofGetWidth());
 
-		ofVertex(500 + (200 + 100 * add) * cos((i / 100.0)*TWO_PI),
-			500 + (200 + 100 * add) * sin((i / 100.0)*TWO_PI));
+		ofVertex(500 + (50 + 100 * add) * cos((i / 100.0)*TWO_PI),
+			500 + (400 + 100 * add) * sin((i / 100.0)*TWO_PI));
 	}
 	ofEndShape();
 }
